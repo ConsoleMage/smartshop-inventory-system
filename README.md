@@ -2,7 +2,7 @@
 
 This is the peer-graded assignment for "Database Integration and Management," the sixth course in a 12-course series in the Microsoft Full-Stack Developer Professional Certificate program.
 
-## 👋 Introduction
+## Introduction
 
 Imagine you are a database engineer tasked with developing the SmartShop Inventory System for a fictional retail company, SmartShop. This system must manage inventory data across multiple stores, providing real-time insights into stock levels, sales trends, and supplier information. 
 
