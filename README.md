@@ -16,7 +16,7 @@ The company requires:
 
 Your goal is to leverage Microsoft Copilot to create, debug, and optimize SQL queries, ensuring the system meets performance and accuracy requirements. This project will span three activities and culminate in a comprehensive inventory management database.
 
-### 🧠 Activity 1: Writing Basic SQL Queries With Microsoft Copilot
+## Activity 1: Writing Basic SQL Queries With Microsoft Copilot
 
 <img width="1560" height="1080" alt="Activity 1" src="https://github.com/user-attachments/assets/f78ec4b2-49f2-42d3-92c5-83a55ac7b086" /><br>
 
@@ -24,7 +24,7 @@ Your goal is to leverage Microsoft Copilot to create, debug, and optimize SQL qu
 
 Yes. It was fairly simple for basic queries, column names were spelled correctly. Pascal case and snake case were correctly used in the generated queries.
 
-### 🧩 Activity 2: Creating Complex SQL Queries With Microsoft Copilot
+## Activity 2: Creating Complex SQL Queries With Microsoft Copilot
 
 <img width="1560" height="1080" alt="Activity 2" src="https://github.com/user-attachments/assets/724483f6-f86a-4fd0-a02d-8d1d108617ae" /><br>
 
@@ -32,7 +32,7 @@ Yes. It was fairly simple for basic queries, column names were spelled correctly
 
 Yes. For complex queries, things were much more challenging. Thankfully Copilot was here to assist me in generating these queries. Especially where there were clauses like JOINs, GROUP BYs and ORDER BYs.
 
-### 🛠️ Activity 3: Debugging And Optimizing SQL Queries With Microsoft Copilot
+## Activity 3: Debugging And Optimizing SQL Queries With Microsoft Copilot
 
 <img width="1560" height="1080" alt="Activity 3" src="https://github.com/user-attachments/assets/791f55e4-0c06-4fa3-ac14-aa1698a880f9" /><br>
 
