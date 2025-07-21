@@ -21,6 +21,7 @@ Your goal is to leverage Microsoft Copilot to create, debug, and optimize SQL qu
 <img width="1560" height="1080" alt="Activity 1" src="https://github.com/user-attachments/assets/f78ec4b2-49f2-42d3-92c5-83a55ac7b086" /><br>
 
 (5 pts) Did you include a brief summary of how Copilot assisted in each step of the development process?
+
 Yes. It was fairly simple for basic queries, column names were spelled correctly. Pascal case and snake case were correctly used in the generated queries.
 
 ### 🧩 Activity 2: Creating Complex SQL Queries With Microsoft Copilot
