@@ -38,7 +38,7 @@ Yes. For complex queries, things were much more challenging. Thankfully Copilot 
 
 (5 pts) Did you debug errors in SQL queries with Copilot’s assistance?
 
-Yes. There were no bugs or errors, so there was nothing to debug.
+Yes. There were no bugs or errors, hence, nothing to debug.
 
 (5 pts) Did you optimize query performance using Copilot’s suggestions, including indexing and query restructuring?
 
