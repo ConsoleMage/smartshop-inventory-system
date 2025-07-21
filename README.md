@@ -4,13 +4,15 @@ This is the peer-graded assignment for "Database Integration and Management," th
 
 ### 👋 Introduction:
 
-Imagine you are a database engineer tasked with developing the SmartShop Inventory System for a fictional retail company, SmartShop. This system must manage inventory data across multiple stores, providing real-time insights into stock levels, sales trends, and supplier information. The company requires:
+Imagine you are a database engineer tasked with developing the SmartShop Inventory System for a fictional retail company, SmartShop. This system must manage inventory data across multiple stores, providing real-time insights into stock levels, sales trends, and supplier information. 
 
-A database to store and retrieve inventory data efficiently.
+The company requires:
 
-Complex queries to analyze trends and relationships between products, sales, and suppliers.
+* A database to store and retrieve inventory data efficiently.
 
-Optimized database operations to ensure high performance and scalability.
+* Complex queries to analyze trends and relationships between products, sales, and suppliers.
+
+* Optimized database operations to ensure high performance and scalability.
 
 Your goal is to leverage Microsoft Copilot to create, debug, and optimize SQL queries, ensuring the system meets performance and accuracy requirements. This project will span three activities and culminate in a comprehensive inventory management database.
 
