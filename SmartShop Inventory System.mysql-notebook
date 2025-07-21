@@ -1,0 +1,153 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "Script",
+    "content": "USE smartshopdb;\n\n-- Activity 1: Writing Basic SQL Queries with Microsoft Copilot\n\n-- (5 pts) Did you use Copilot to generate the basic SQL queries for retrieving and filtering data?\n-- Yes.\n\n-- (5 pts) Did you include a brief summary of how Copilot assisted in each step of the development process?\n-- Yes. It was fairly simple for basic queries, column names were spelled correctly. Pascal case and snake case were\n-- correctly used in the generated queries.\n\nSELECT * FROM products;\n\nSELECT ProductName, Category, Price, StockLevel\nFROM products;\n\nSELECT ProductName, Category, Price, StockLevel\nFROM products\nWHERE Category = 'Electronics';\n\nSELECT ProductName, Category, Price, StockLevel\nFROM products\nWHERE StockLevel < 20;\n\n-- Activity 2: Creating Complex SQL Queries with Microsoft Copilot\n\n-- (5 pts) Did you use Copilot to generate complex SQL queries, including JOINs, nested queries, and aggregations?\n-- Yes.\n\n-- (5 pts) Did you include a brief summary of how Copilot assisted in each step of the development process?\n-- Yes. For complex queries, things were much more challenging. Thankfully Copilot was here to assist me in \n-- generating these queries. Especially where there were clauses like JOINs, GROUP BYs and ORDER BYs.\n\n-- Sales details with product and supplier\nSELECT \n    p.ProductName,\n    s.SaleDate,\n    s.StoreLocation,\n    s.UnitsSold\nFROM products p\nJOIN sales s ON p.ProductID = s.ProductID\nJOIN suppliers sup ON p.SupplierID = sup.SupplierID;\n\n-- Sales performance summary per product: \n-- Retrieves total, average, and maximum units sold, \n-- then calculates total sales amount using product price.\nSELECT \n    ProductName,\n    COALESCE((\n        SELECT SUM(UnitsSold)\n        FROM sales\n        WHERE sales.ProductID = products.ProductID\n    ), 0) AS TotalUnitsSold,\n    \n    COALESCE((\n        SELECT AVG(UnitsSold)\n        FROM sales\n        WHERE sales.ProductID = products.ProductID\n    ), 0) AS AverageUnitsSold,\n\n    COALESCE((\n        SELECT MAX(UnitsSold)\n        FROM sales\n        WHERE sales.ProductID = products.ProductID\n    ), 0) AS MaxUnitsSold,\n\n    COALESCE((\n        SELECT SUM(UnitsSold)\n        FROM sales\n        WHERE sales.ProductID = products.ProductID\n    ), 0) * Price AS SalesAmount\nFROM products;\n\n-- Top 3 suppliers with most delayed deliveries\nSELECT \n    s.SupplierName,\n    COUNT(*) AS DelayedDeliveries\nFROM deliveries d\nJOIN suppliers s ON d.SupplierID = s.SupplierID\nWHERE d.DeliveryStatus = 'Delayed'\nGROUP BY s.SupplierName\nORDER BY DelayedDeliveries DESC\nLIMIT 3;\n\n-- Activity 3: Debugging and Optimizing SQL Queries with Microsoft Copilot\n\n-- (5 pts) Did you debug errors in SQL queries with Copilot’s assistance?\n-- Yes. There were no bugs or errors, hence, nothing to debug.\n\n-- (5 pts) Did you optimize query performance using Copilot’s suggestions, including indexing and query restructuring?\n-- Yes. Query performance was improved with the CREATE INDEX statement. Instead of repeating the same subquery multiple times\n-- where the product ID in the sales table is equal to product ID in the products table, it can be restructured with a \n-- LEFT JOIN and GROUP BY clause.\n\n-- (5 pts) Did you include a brief summary of how Copilot assisted in each step of the development process?\n-- Yes. Copilot was able to help me optimize query performance in ways I couldn’t.\n\n-- Add index on ProductID in sales\nCREATE INDEX idx_sales_product_id ON sales(ProductID);\n\n-- Index DeliveryStatus in deliveries\nCREATE INDEX idx_deliveries_status ON deliveries(DeliveryStatus);\n\n-- Index SupplierID in products and deliveries\nCREATE INDEX idx_products_supplier_id ON products(SupplierID);\nCREATE INDEX idx_deliveries_supplier_id ON deliveries(SupplierID);\n\nSELECT \n    p.ProductName,\n    COALESCE(SUM(s.UnitsSold), 0) AS TotalUnitsSold,\n    COALESCE(AVG(s.UnitsSold), 0) AS AverageUnitsSold,\n    COALESCE(MAX(s.UnitsSold), 0) AS MaxUnitsSold,\n    COALESCE(SUM(s.UnitsSold), 0) * p.Price AS SalesAmount\nFROM products p\nLEFT JOIN sales s ON p.ProductID = s.ProductID\nGROUP BY p.ProductID, p.ProductName, p.Price;\n\nSELECT \n    s.SupplierName,\n    COUNT(*) AS DelayedDeliveries\nFROM suppliers s\nJOIN deliveries d ON d.SupplierID = s.SupplierID\nWHERE d.DeliveryStatus = 'Delayed'\nGROUP BY s.SupplierName\nORDER BY DelayedDeliveries DESC\nLIMIT 3;",
+    "options": {
+        "tabSize": 4,
+        "indentSize": 4,
+        "insertSpaces": true,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": null,
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 126,
+                "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 16
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 16,
+                            "length": 469
+                        },
+                        "contentStart": 462,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 485,
+                            "length": 64
+                        },
+                        "contentStart": 487,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 549,
+                            "length": 95
+                        },
+                        "contentStart": 551,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 644,
+                            "length": 86
+                        },
+                        "contentStart": 646,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 730,
+                            "length": 747
+                        },
+                        "contentStart": 1287,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 1477,
+                            "length": 784
+                        },
+                        "contentStart": 1635,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 2261,
+                            "length": 277
+                        },
+                        "contentStart": 2311,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 2538,
+                            "length": 897
+                        },
+                        "contentStart": 3381,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 3435,
+                            "length": 105
+                        },
+                        "contentStart": 3475,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 3540,
+                            "length": 111
+                        },
+                        "contentStart": 3589,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 3651,
+                            "length": 67
+                        },
+                        "contentStart": 3652,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 3718,
+                            "length": 355
+                        },
+                        "contentStart": 3720,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 4073,
+                            "length": 229
+                        },
+                        "contentStart": 4075,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}
