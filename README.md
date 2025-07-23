@@ -44,5 +44,9 @@ Yes. There were no bugs or errors, hence, nothing to debug.
 
 Yes. Query performance was improved with the CREATE INDEX statement. Instead of repeating the same subquery multiple times where the product ID in the sales table is equal to product ID in the products table, it can be restructured with a LEFT JOIN and GROUP BY clause.
 
+(5 pts) Did you include a brief summary of how Copilot assisted in each step of the development process?
+
+Yes. Copilot was able to help me optimize query performance in ways I couldn’t.
+
 **Tech Stack**: MySQL Community Server, MySQL Shell for VS Code, Visual Studio Code, Microsoft Copilot
 
