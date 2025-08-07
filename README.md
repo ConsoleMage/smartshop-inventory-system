@@ -22,11 +22,11 @@ Your goal is to leverage Microsoft Copilot to create, debug, and optimize SQL qu
 
 (5 pts) Did you use Copilot to generate the basic SQL queries for retrieving and filtering data?
 
-Yes.
+> Yes.
 
 (5 pts) Did you include a brief summary of how Copilot assisted in each step of the development process?
 
-Yes. It was fairly simple for basic queries, column names were spelled correctly. Pascal case and snake case were correctly used in the generated queries.
+> Yes. It was fairly simple for basic queries, column names were spelled correctly. Pascal case and snake case were correctly used in the generated queries.
 
 ## Activity 2: Creating Complex SQL Queries With Microsoft Copilot
 
@@ -34,11 +34,11 @@ Yes. It was fairly simple for basic queries, column names were spelled correctly
 
 (5 pts) Did you use Copilot to generate complex SQL queries, including JOINs, nested queries, and aggregations?
 
-Yes.
+> Yes.
 
 (5 pts) Did you include a brief summary of how Copilot assisted in each step of the development process?
 
-Yes. For complex queries, things were much more challenging. Thankfully Copilot was here to assist me in generating these queries. Especially where there were clauses like JOINs, GROUP BYs and ORDER BYs.
+> Yes. For complex queries, things were much more challenging. Thankfully Copilot was here to assist me in generating these queries. Especially where there were clauses like JOINs, GROUP BYs and ORDER BYs.
 
 ## Activity 3: Debugging And Optimizing SQL Queries With Microsoft Copilot
 
@@ -46,15 +46,15 @@ Yes. For complex queries, things were much more challenging. Thankfully Copilot 
 
 (5 pts) Did you debug errors in SQL queries with Copilot’s assistance?
 
-Yes. There were no bugs or errors, hence, nothing to debug.
+> Yes. There were no bugs or errors, hence, nothing to debug.
 
 (5 pts) Did you optimize query performance using Copilot’s suggestions, including indexing and query restructuring?
 
-Yes. Query performance was improved with the CREATE INDEX statement. Instead of repeating the same subquery multiple times where the product ID in the sales table is equal to product ID in the products table, it can be restructured with a LEFT JOIN and GROUP BY clause.
+> Yes. Query performance was improved with the CREATE INDEX statement. Instead of repeating the same subquery multiple times where the product ID in the sales table is equal to product ID in the products table, it can be restructured with a LEFT JOIN and GROUP BY clause.
 
 (5 pts) Did you include a brief summary of how Copilot assisted in each step of the development process?
 
-Yes. Copilot was able to help me optimize query performance in ways I couldn’t.
+> Yes. Copilot was able to help me optimize query performance in ways I couldn’t.
 
 **Tech Stack**: MySQL Community Server, MySQL Shell for VS Code, Visual Studio Code, Microsoft Copilot
 
